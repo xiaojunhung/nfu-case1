@@ -122,6 +122,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     <head>
         <meta http-equiv="Content-Type" name="viewport" content="text/html; charset=utf-8 width=device-width, initial-scale=1.0">
         <title>智能文字客服機器人</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
         <!--手機板css-->
         <link rel="stylesheet" type="text/css" href="css/indexrwdp.css">
@@ -129,10 +130,12 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         <link rel="stylesheet" type="text/css" href="css/indexrwdt.css"/>
         <!--桌機css-->
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        
         <link rel="stylesheet" href="malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css" />
         <!--<script src="./dist/Chart.bundle.js"></script>-->
         <script src="js/jquery-1.8.1.min.js"></script>
         <script type="text/javascript" src="layer-v1.8.5/layer/layer.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script language="javascript" type="text/javascript">
             $(document).ready(function () {
                 
@@ -308,21 +311,33 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             <div id="content">
                 <div id="test"></div>
                 <div id="framecontent">
-                    <div id="title" style="text-align:center;">
-                        <span>智能文字客服機器人-即問即答</span>
-                        <span id="explan" onclick="explan_show()">說明 ▼</span>
-                        <input id="test_btn" type="button" value="test" style="display:none" onclick='test()'/>
-                        <input id="get_loginmessage" name="get_loginmessage" type="hidden" value="<?php if(isset($_GET['login'])&&$_GET['login']=="wrong"){echo "wrong";}?>" />
-                        <input type="hidden" value="" id="username" name="username" class="username" />
-                        <input type="hidden" value="" id="password" name="password" class="password" />
-                    </div>
-                    <?php
-                    if(isset($_SESSION['customerservice_loginUsername'])){
-                        echo '<a href=\'?logout=true\' class="login_span">登出</a>';
-                    }else{
-                        echo '<span class="login_span" onclick="login_show()">會員登入</span>';
-                    }
-                    ?>
+                    <!--<div id="title" style="text-align:center;">
+<span>智能文字客服機器人-即問即答</span>
+<span id="explan" onclick="explan_show()">說明 ▼</span>
+<input id="test_btn" type="button" value="test" style="display:none" onclick='test()'/>
+<input id="get_loginmessage" name="get_loginmessage" type="hidden" value="<?php if(isset($_GET['login'])&&$_GET['login']=="wrong"){echo "wrong";}?>" />
+<input type="hidden" value="" id="username" name="username" class="username" />
+<input type="hidden" value="" id="password" name="password" class="password" />
+</div>-->
+                    <nav class="navbar navbar-inverse" style="background-color: #0061C0;border:0px;">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand">智能文字客服機器人-即問即答</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">說明</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><?php 
+                                    if(isset($_SESSION['customerservice_loginUsername'])){
+                                        echo '<a href=\'?logout=true\'>登出</a>';
+                                    }else{
+                                        echo '<a href="#" onclick="login_show()">會員登入</a>';
+                                    }
+                                    ?></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
                 <div id="explan_area">
                     <div id="explan_area_text">
