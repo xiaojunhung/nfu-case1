@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
 body{
 	margin: 0;
 	padding: 0;
@@ -220,15 +219,6 @@ span.line{
     height: 1px;
     display: inherit;
     margin: 10px 0 5px 0;	
-}
-.rwd{
-        display: none;
-    }
-/**手機板css**/
-@media screen and (min-width: 768px) {
-    .rwd{
-        display: block;
-    }
 }
 <!---------------------- 用戶登入 -------------------->
 .login-block {

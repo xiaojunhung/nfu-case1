@@ -124,6 +124,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 <title>智能文字客服機器人</title>
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
+<link rel="stylesheet" type="text/css" href="css/indexrwd.css">
 <link rel="stylesheet" href="malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css" />
 <!--<script src="./dist/Chart.bundle.js"></script>-->
 <script src="js/jquery-1.8.1.min.js"></script>
@@ -306,7 +307,7 @@ function login_show(){
             <div id="title" style="text-align:center;">
             	<span>智能文字客服機器人-即問即答</span>
                 <span id="explan" onclick="explan_show()">說明 ▼</span>
-                <span id="explanrwd" onclick="" class="rwd">說明</span>
+                <span id="explanrwd" class="rwd">說明</span>
                 <input id="test_btn" type="button" value="test" style="display:none" onclick='test()'/>
                 <input id="get_loginmessage" name="get_loginmessage" type="hidden" value="<?php if(isset($_GET['login'])&&$_GET['login']=="wrong"){echo "wrong";}?>" />
                 <input type="hidden" value="" id="username" name="username" class="username" />
