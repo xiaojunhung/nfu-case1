@@ -315,24 +315,24 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 <span>智能文字客服機器人-即問即答</span>
 <span id="explan" onclick="explan_show()">說明 ▼</span>
 <input id="test_btn" type="button" value="test" style="display:none" onclick='test()'/>
-<input id="get_loginmessage" name="get_loginmessage" type="hidden" value="<?php if(isset($_GET['login'])&&$_GET['login']=="wrong"){echo "wrong";}?>" />
+<input id="get_loginmessage" name="get_loginmessage" type="hidden" value="<?php //if(isset($_GET['login'])&&$_GET['login']=="wrong"){echo "wrong";}?>" />
 <input type="hidden" value="" id="username" name="username" class="username" />
 <input type="hidden" value="" id="password" name="password" class="password" />
 </div>-->
                     <nav class="navbar navbar-inverse" style="background-color: #0061C0;border:0px;">
                         <div class="container-fluid">
                             <div class="navbar-header">
-                                <a class="navbar-brand">智能文字客服機器人-即問即答</a>
+                                <a class="navbar-brand" style="color:white;">智能文字客服機器人-即問即答</a>
                             </div>
                             <ul class="nav navbar-nav">
-                                <li><a href="#">說明</a></li>
+                                <li><a href="#" onclick="explan_show()" style="color:white;">說明</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><?php 
                                     if(isset($_SESSION['customerservice_loginUsername'])){
-                                        echo '<a href=\'?logout=true\'>登出</a>';
+                                        echo '<a href=\'?logout=true\' style="color:white;">登出</a>';
                                     }else{
-                                        echo '<a href="#" onclick="login_show()">會員登入</a>';
+                                        echo '<a href="#" onclick="login_show()" style="color:white;">會員登入</a>';
                                     }
                                     ?></li>
                             </ul>
