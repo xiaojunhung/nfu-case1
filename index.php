@@ -125,11 +125,11 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
         <!--手機板css-->
-        <link rel="stylesheet" type="text/css" href="css/indexrwdp.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         <!--平板css-->
-        <link rel="stylesheet" type="text/css" href="css/indexrwdt.css"/>
+        <!--<link rel="stylesheet" type="text/css" href="css/indexrwdt.css"/>-->
         <!--桌機css-->
-        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <!--<link rel="stylesheet" type="text/css" href="css/indexrwddt.css"/>-->
         
         <link rel="stylesheet" href="malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css" />
         <!--<script src="./dist/Chart.bundle.js"></script>-->
@@ -319,6 +319,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 <input type="hidden" value="" id="username" name="username" class="username" />
 <input type="hidden" value="" id="password" name="password" class="password" />
 </div>-->
+                    <div id="title" style="text-align:center;">
                     <nav class="navbar navbar-inverse" style="background-color: #0061C0;border:0px;">
                         <div class="container-fluid">
                             <div class="navbar-header">
@@ -338,6 +339,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
                             </ul>
                         </div>
                     </nav>
+                    </div>
                 </div>
                 <div id="explan_area">
                     <div id="explan_area_text">
